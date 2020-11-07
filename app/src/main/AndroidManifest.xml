@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidBuddies">
         <activity
-            android:name=".ui.login.MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/title_activity_main"></activity>
         <activity
             android:name=".ui.login.LoginActivity"
