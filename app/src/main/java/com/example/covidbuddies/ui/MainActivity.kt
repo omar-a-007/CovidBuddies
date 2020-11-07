@@ -1,4 +1,4 @@
-package com.example.covidbuddies.ui.login
+package com.example.covidbuddies.ui
 
 import android.os.Bundle
 
