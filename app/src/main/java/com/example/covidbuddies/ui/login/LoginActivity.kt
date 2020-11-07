@@ -1,4 +1,4 @@
-package com.example.covidbuddies.ui.login
+package com.example.newfiles.ui.login
 
 import android.app.Activity
 import androidx.lifecycle.Observer
@@ -15,7 +15,7 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 
-import com.example.covidbuddies.R
+import com.example.newfiles.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,13 +26,13 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_login)
 
-        val username = findViewById<EditText>(R.id.txt_username)
-        val password = findViewById<EditText>(R.id.txt_password)
-        val login = findViewById<Button>(R.id.btn_login)
+        val username = findViewById<EditText>(R.id.username)
+        val password = findViewById<EditText>(R.id.password)
+        val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
-                .get(LoginViewModel::class.java)
+            .get(LoginViewModel::class.java)
 
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
             val loginState = it ?: return@Observer
@@ -66,16 +66,16 @@ class LoginActivity : AppCompatActivity() {
 
         username.afterTextChanged {
             loginViewModel.loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
+                username.text.toString(),
+                password.text.toString()
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginViewModel.loginDataChanged(
-                        username.text.toString(),
-                        password.text.toString()
+                    username.text.toString(),
+                    password.text.toString()
                 )
             }
 
@@ -83,8 +83,8 @@ class LoginActivity : AppCompatActivity() {
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->
                         loginViewModel.login(
-                                username.text.toString(),
-                                password.text.toString()
+                            username.text.toString(),
+                            password.text.toString()
                         )
                 }
                 false
@@ -102,9 +102,9 @@ class LoginActivity : AppCompatActivity() {
         val displayName = model.displayName
         // TODO : initiate successful logged in experience
         Toast.makeText(
-                applicationContext,
-                "$welcome $displayName",
-                Toast.LENGTH_LONG
+            applicationContext,
+            "$welcome $displayName",
+            Toast.LENGTH_LONG
         ).show()
     }
 
