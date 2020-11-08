@@ -17,4 +17,8 @@ import com.example.covidbuddies.R;
  */
 public class ThirdFragment extends Fragment {
 
+   // @Override
+    //protected void onCreate(Bundle savedInstanceState) {
+      //  super.onCreate(savedInstanceState);
+    //}
 }
