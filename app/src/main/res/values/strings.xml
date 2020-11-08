@@ -18,4 +18,6 @@
     <string name="hello_blank_fragment">hello_blank_fragment</string>
     <string name="fragment_2">fragment_2</string>
     <string name="fragment_3">fragment_3</string>
+    <string name="safety">Safety</string>
+    <string name="self">Self</string>
 </resources>
